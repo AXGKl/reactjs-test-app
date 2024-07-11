@@ -12,7 +12,7 @@ values:
 
     npm install
     npm run build
-    echo hiasdfasdfa
+    echo hiasdfasdfaddd
   builtAssets: build/
   gitCloneUrl: https://github.com/AXGKl/reactjs-test-app.git
   gitRepository: AXGKl/reactjs-test-app
