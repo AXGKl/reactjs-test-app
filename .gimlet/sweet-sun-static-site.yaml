@@ -1,0 +1,19 @@
+app: static-site
+env: sweet-sun
+namespace: firstapp
+chart:
+  repository: https://chart.onechart.dev
+  name: static-site
+  version: 0.64.0
+values:
+  buildImage: node:latest
+  buildScript: |-
+    # !/usr/bin/env bash
+
+    npm install
+    npm run build
+    echo hiasdfasdfa
+  builtAssets: build/
+  gitCloneUrl: https://github.com/AXGKl/reactjs-test-app.git
+  gitRepository: AXGKl/reactjs-test-app
+  gitSha: '{{ .SHA }}'
