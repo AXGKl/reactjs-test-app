@@ -1,0 +1,22 @@
+app: reactjs-test-app
+env: solid-snowflake
+namespace: default
+chart:
+  name: https://github.com/gimlet-io/onechart.git?branch=simplified-schema&path=/charts/onechart/
+values:
+  gitRepository: AXGKl/reactjs-test-app
+  gitSha: '{{ .SHA }}'
+  image:
+    dockerfile: ""
+    registry: ""
+    strategy: static
+    tag: "1.25"
+  imagePullSecrets:
+    - '{{ .APP }}--pullsecret'
+  ingress:
+    host: axgkl-reactjs-test-app
+    tlsEnabled: true
+  resources:
+    ignoreLimits: true
+  vars:
+    newKey: New Value
